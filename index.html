@@ -1,1 +1,342 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#253746">
+  <meta name="description" content="Hotel Parque El Mohan en Villanueva, Casanare. Alojamiento y consultas de parqueadero para transportadores y viajeros.">
+  <title>Hotel Parque El Mohan | Tu descanso en el Llano</title>
+  <style>
+    :root {
+      --orange: #e98245;
+      --gold: #f2c66d;
+      --green: #536b48;
+      --brown: #684a36;
+      --cream: #fff7eb;
+      --navy: #253746;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--navy);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .nav {
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 7%;
+      flex-wrap: wrap;
+    }
+    .brand { font-size: 1.2rem; font-weight: 800; }
+    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; font-size: .92rem; }
+    .hero {
+      min-height: 530px;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(24,39,48,.88), rgba(24,39,48,.2)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+    }
+    .hero-content { max-width: 690px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.7rem); line-height: 1.06; margin: 14px 0; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.15; }
+    .hero p { font-size: 1.12rem; max-width: 580px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 20px;
+      background: var(--orange);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn.secondary { background: var(--cream); color: var(--navy); }
+    .section { padding: 68px 7%; }
+    .section-heading { max-width: 720px; margin-bottom: 28px; }
+    .section-heading p { color: #58636b; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 22px rgba(37,55,70,.08);
+    }
+    .card img { width: 100%; height: 215px; object-fit: cover; display: block; }
+    .card-body { padding: 22px; }
+    .card h3 { margin-top: 0; }
+    .highlight { background: #f0dfc4; }
+    .parking {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      align-items: center;
+      gap: 34px;
+    }
+    .parking img { width: 100%; border-radius: 14px; min-height: 250px; object-fit: cover; }
+    .form-wrap { max-width: 780px; background: white; padding: 28px; border-radius: 14px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    label { display: block; font-weight: bold; font-size: .92rem; }
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 12px;
+      border: 1px solid #cbd0d3;
+      border-radius: 7px;
+      font: inherit;
+      background: white;
+    }
+    .full { grid-column: 1 / -1; }
+    .map-link { display: inline-block; margin-top: 10px; font-weight: bold; }
+    footer { background: var(--navy); color: white; padding: 34px 7%; }
+    footer a { color: var(--gold); }
+    .whatsapp {
+      position: fixed; right: 18px; bottom: 18px; z-index: 5;
+      background: #16834b; color: white; border-radius: 50px;
+      padding: 13px 18px; text-decoration: none; font-weight: bold;
+      box-shadow: 0 3px 12px #0003;
+    }
+    .note { font-size: .9rem; color: #5c6368; }
+    @media (max-width: 600px) {
+      .nav { padding: 15px 5%; }
+      .nav-links { gap: 12px; }
+      .hero { padding: 65px 6%; min-height: 500px; }
+      .section { padding: 48px 6%; }
+      .form-grid { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#inicio" style="text-decoration:none">🌅 Hotel Parque El Mohan</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#parqueadero">Parqueadero</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#reservas">Reservas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">Villanueva · Casanare · Colombia</span>
+        <h1>Tu descanso en la ruta, en el corazón del Llano.</h1>
+        <p>Bienvenido al Hotel Parque El Mohan. Un lugar para hacer una pausa en el camino, descansar y consultar opciones de alojamiento y parqueadero para vehículos grandes.</p>
+        <div class="actions">
+          <a class="btn" href="#reservas">Consultar reserva</a>
+          <a class="btn secondary" href="https://maps.app.goo.gl/SMCypqFcjntXgcKm6" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cards">
+        <article class="card"><div class="card-body">
+          <h3>🛏️ Alojamiento</h3>
+          <p>Consulta las opciones de habitación y encuentra un espacio para descansar durante tu viaje.</p>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <h3>🚛 Parqueadero</h3>
+          <p>Consulta con nosotros las condiciones y disponibilidad para tractomulas, camiones y vehículos grandes.</p>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <h3>📍 Ubicación</h3>
+          <p>Encuéntranos en Villanueva, Casanare, en pleno territorio de los Llanos Orientales.</p>
+        </div></article>
+      </div>
+    </section>
+
+    <section class="section" id="habitaciones">
+      <div class="section-heading">
+        <span class="eyebrow" style="color:var(--green)">Tu próxima parada</span>
+        <h2>Un espacio para recargar energías</h2>
+        <p>Estas fotografías son ilustrativas. Consulta directamente con el hotel los tipos de habitación, tarifas y disponibilidad reales.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Habitación de hotel de ejemplo" loading="lazy">
+          <div class="card-body"><h3>Habitaciones</h3><p>Consulta las opciones de alojamiento disponibles para tus fechas.</p><a class="map-link" href="#reservas">Consultar por WhatsApp →</a></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80" alt="Interior de hotel ilustrativo" loading="lazy">
+          <div class="card-body"><h3>Descanso en el camino</h3><p>Comunícate con nosotros para conocer las habitaciones y servicios confirmados.</p><a class="map-link" href="#reservas">Solicitar información →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section highlight" id="parqueadero">
+      <div class="parking">
+        <div>
+          <span class="eyebrow" style="color:var(--green)">Pensado para transportadores</span>
+          <h2>Tu parada en la ruta también importa.</h2>
+          <p>Sabemos que en los viajes largos es importante encontrar un lugar donde hacer una pausa. Consulta las opciones de parqueadero para tractomulas, camiones y otros vehículos grandes.</p>
+          <p>La capacidad, las tarifas y las condiciones de ingreso deben confirmarse directamente con el hotel.</p>
+          <a class="btn" href="https://wa.me/573203002064?text=Hola%2C%20quiero%20consultar%20el%20parqueadero%20para%20veh%C3%ADculos%20grandes." target="_blank" rel="noopener">Consultar parqueadero</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=85" alt="Camión de carga en carretera, fotografía ilustrativa" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section" id="reservas">
+      <div class="section-heading">
+        <span class="eyebrow" style="color:var(--green)">Estamos para atenderte</span>
+        <h2>Consulta tu reserva</h2>
+        <p>Completa los datos y envía tu solicitud por WhatsApp. El hotel deberá confirmar la disponibilidad y las tarifas.</p>
+      </div>
+      <div class="form-wrap">
+        <form id="booking-form">
+          <div class="form-grid">
+            <label>Nombre completo
+              <input name="nombre" autocomplete="name" required>
+            </label>
+            <label>Teléfono de contacto
+              <input name="telefono" type="tel" autocomplete="tel" required>
+            </label>
+            <label>Fecha de entrada
+              <input name="entrada" id="entrada" type="date" required>
+            </label>
+            <label>Fecha de salida
+              <input name="salida" id="salida" type="date" required>
+            </label>
+            <label>Número de huéspedes
+              <select name="huespedes">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option>
+              </select>
+            </label>
+            <label>Número de habitaciones
+              <select name="habitaciones">
+                <option>1</option><option>2</option><option>3 o más</option>
+              </select>
+            </label>
+            <label>Tipo de vehículo
+              <select name="vehiculo">
+                <option>Automóvil</option><option>Camioneta</option><option>Camión</option><option>Tractomula</option><option>Otro</option><option>No aplica</option>
+              </select>
+            </label>
+            <label>¿Necesita parqueadero?
+              <select name="parqueadero">
+                <option>Sí</option><option>No</option><option>Quiero consultar</option>
+              </select>
+            </label>
+            <label class="full">Observaciones
+              <textarea name="observaciones" rows="3" placeholder="Cuéntanos qué necesitas"></textarea>
+            </label>
+            <div class="full">
+              <button class="btn" type="submit">Enviar solicitud por WhatsApp</button>
+              <p class="note">El envío abre WhatsApp. Tu solicitud no será una reserva confirmada hasta que el hotel responda.</p>
+              <p id="error" role="alert" style="color:#a32d22"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="section-heading">
+        <span class="eyebrow" style="color:var(--green)">Estamos en el Llano</span>
+        <h2>Encuentra el Hotel Parque El Mohan</h2>
+        <p>Dirección: Carrera 3 #8-21, Villanueva, Casanare, Colombia.</p>
+        <a class="btn" href="https://maps.app.goo.gl/SMCypqFcjntXgcKm6" target="_blank" rel="noopener">Abrir Google Maps</a>
+      </div>
+    </section>
+
+    <section class="section highlight" id="contacto">
+      <h2>¿Tienes alguna pregunta?</h2>
+      <p>Comunícate con el Hotel Parque El Mohan para consultar habitaciones, tarifas y parqueadero.</p>
+      <p><strong>Teléfono:</strong> <a href="tel:+573203002064">320 300 2064</a></p>
+      <a class="btn" href="https://wa.me/573203002064?text=Hola%2C%20Hotel%20Parque%20El%20Mohan.%20Quiero%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Hotel Parque El Mohan</strong>
+    <p>Tu descanso en la ruta, en el corazón del Llano.</p>
+    <p>Cra. 3 #8-21, Villanueva, Casanare, Colombia.</p>
+    <p>Teléfono: <a href="tel:+573203002064">320 300 2064</a></p>
+    <small>Las imágenes son ilustrativas. Las reservas, tarifas y servicios deben confirmarse con el hotel.</small>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/573203002064" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp</a>
+
+  <script>
+    const entrada = document.getElementById('entrada');
+    const salida = document.getElementById('salida');
+    const hoy = new Date();
+    const fechaLocal = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000)
+      .toISOString().slice(0, 10);
+    entrada.min = fechaLocal;
+    salida.min = fechaLocal;
+
+    entrada.addEventListener('change', () => {
+      salida.min = entrada.value
+        ? new Date(new Date(entrada.value + 'T12:00:00').getTime() + 86400000)
+            .toISOString().slice(0, 10)
+        : fechaLocal;
+      if (salida.value && salida.value <= entrada.value) salida.value = '';
+    });
+
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const data = new FormData(this);
+      const start = data.get('entrada');
+      const end = data.get('salida');
+      const error = document.getElementById('error');
+
+      if (!start || !end || end <= start || start < fechaLocal) {
+        error.textContent = 'Verifica las fechas. La salida debe ser posterior a la entrada y las fechas no pueden estar en el pasado.';
+        return;
+      }
+      error.textContent = '';
+
+      const message = [
+        'Hola, Hotel Parque El Mohan. Quiero consultar una reserva.',
+        '',
+        'Nombre: ' + data.get('nombre'),
+        'Teléfono: ' + data.get('telefono'),
+        'Entrada: ' + start,
+        'Salida: ' + end,
+        'Huéspedes: ' + data.get('huespedes'),
+        'Habitaciones: ' + data.get('habitaciones'),
+        'Vehículo: ' + data.get('vehiculo'),
+        'Parqueadero: ' + data.get('parqueadero'),
+        'Observaciones: ' + (data.get('observaciones') || 'Ninguna'),
+        '',
+        'Entiendo que la reserva queda pendiente de confirmación.'
+      ].join('\n');
+
+      window.open('https://wa.me/573203002064?text=' + encodeURIComponent(message), '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
+
